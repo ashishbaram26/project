@@ -1,0 +1,131 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>college application form</title>
+<img  width="1400" height="300" src="https://scontent.fktm7-1.fna.fbcdn.net/v/t39.30808-6/475073018_488610250950000_1096221950371475375_n.jpg?_nc_cat=105&amp;ccb=1-7&amp;_nc_sid=127cfc&amp;_nc_ohc=pcRb7BlVumMQ7kNvgESCg47&amp;_nc_oc=Adi_PMSIYM3CsXonIadDXcfCq031EDDM5mFLQ2r9VeiZx24UnBSXR9w2AOeuxIoXLq4&amp;_nc_zt=23&amp;_nc_ht=scontent.fktm7-1.fna&amp;_nc_gid=AL--aJ8x-Qh-UNXuq2EESlH&amp;oh=00_AYBfju7HdOWQaPTEH4Dm8k0P10qq_QJxcSy2rEK5CE_iVA&amp;oe=67A3AA06">
+
+
+</head>
+<body >
+    <style> 
+    body{
+        background-color:rgb(205, 235, 255);
+    }
+   .para{
+   font-size: 17px;
+   }
+   
+   .head1 {
+            text-align:center;
+            background-color:#A7D7FF;
+            color:Black;
+        }
+
+ 
+#apply{
+    text-align:center;
+    
+    color:black; 
+}
+.para{
+    text-align:center;
+
+}
+    </style>
+
+
+
+<h1 class="head1"><b>  <u> Glorious Academy Registration Form</u> </b></h1>
+<h1 id="apply">Apply Now</h1>
+
+<form id="registration">
+    <div>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" size="30" name="fname" placeholder="Enter First Name" required>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" size="30" placeholder="Enter last Name" required>
+
+        <label for="birthday">Date of Birth:</label>
+        <input type="date" id="birthday" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="number" id="phone" placeholder="+977" required>
+
+        <label for="gpa">Obtained GPA:</label>
+        <input type="number" id="gpa" required><br><br>
+
+        <h2>Address:</h2>
+        District: <input type="text" id="address" required>
+        City: <input type="text" id="city" required>
+        Province: <input type="text" id="province" required><br><br>
+        Province Code: <input type="number" id="province_code" required>
+
+        Educational Background: <input type="text" placeholder="Your previous School" id="prev_school"><br><br>
+
+        <label for="course">Choose Course:</label>
+        <select name="course" id="course">
+            <option value="BSC">BSC</option>
+            <option value="BSCIT">BSCIT</option>
+            <option value="MBBS">MBBS</option>
+            <option value="BTECH">BTECH</option>
+        </select><br><br>
+
+        <h5>Before clicking submit check your Application</h5>
+        <input type="button" value="Submit" onclick="filltable()">
+    </div>
+</form>
+
+<table border="2" id="t_data">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date Of Birth</th>
+        <th>Phone Number</th>
+        <th>Obtained Gpa</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Province</th>
+        <th>Province code</th>
+        <th>Previous School</th>
+    </tr>
+</table>
+
+<p><b><i>If you haven't enough time to visit college then watch this video.</i></b></p>
+<iframe contols autoplay muted loop width="1300" height ="400"src= "https://www.youtube.com/embed/HzoQM058Jgw" ></iframe>
+
+
+
+<p> <center>Limited Seat available. Apply Now.</center></p>
+<p class="para">Copyright © 2024 All Rights Reserved. Best College of Nepal.</p>
+
+
+
+<script>
+    function filltable() {
+        var form = document.getElementById("registration");
+        var table = document.getElementById("t_data");
+        var newRow = table.insertRow();
+
+        var cells = [];
+        for (var i = 0; i < 10; i++) {
+            cells[i] = newRow.insertCell(i);
+        }
+
+        cells[0].innerHTML = form.elements["fname"].value;
+        cells[1].innerHTML = form.elements["lname"].value;
+        cells[2].innerHTML = form.elements["birthday"].value;
+        cells[3].innerHTML = form.elements["phone"].value;
+        cells[4].innerHTML = form.elements["gpa"].value;
+        cells[5].innerHTML = form.elements["address"].value;
+        cells[6].innerHTML = form.elements["city"].value;
+        cells[7].innerHTML = form.elements["province"].value;
+        cells[8].innerHTML = form.elements["province_code"].value;
+        cells[9].innerHTML = form.elements["prev_school"].value;
+    }
+</script>
+
+</body>
+</html>
